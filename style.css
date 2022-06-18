@@ -234,7 +234,6 @@ label {
   height: 100vh;
   overflow: scroll;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
 }
 .side-open {
@@ -350,6 +349,7 @@ label {
   color: #2a4482;
   font-family: "Monoton", Helvetica, sans-serif !important;
   align-self: center;
+  margin-top: 100px;
 }
 @media (min-width: 700px) {
   .logo-h {
