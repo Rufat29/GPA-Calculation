@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="img/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="img/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+    <link rel="manifest" href="img/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <div id="preloader">
+      <img src="Gear-0.2s-200px.svg" alt="" />
+    </div>
+    <div class="container1">
+      <div class="ilk">
+        <h1 class="font-600">Ortalama balın hesablanması</h1>
+        <button class="btn1" onclick="semacil()">Semestr üzrə</button>
+        <button class="btn1" onclick="umumacil()">Ümumi</button>
+      </div>
+      <div class="side">
+        <div>
+          <div class="side-inner">
+            <h5 class="mar-0 font-600">Məlumat</h5>
+            <button id="close-sidenav" class="side-close">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button
+                    class="btn btn-link btn-block text-left font-500"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Bu il üçün kreditlər
+                  </button>
+                </h2>
+              </div>
+
+              <div
+                id="collapseOne"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr class="table-info">
+                        <th scope="col ">#</th>
+                        <th scope="col ">Fənn adı</th>
+                        <th scope="col ">Kredit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-primary">
+                        <th scope="row ">1</th>
+                        <td>Data and Information Engineering</td>
+                        <td>7</td>
+                      </tr>
+                      <tr class="table-warning">
+                        <th scope="row ">4</th>
+                        <td>Information Security of Engineering Systems</td>
+                        <td>7</td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <th scope="row ">2</th>
+                        <td>Computer aided Design Systems</td>
+                        <td>6</td>
+                      </tr>
+                      <tr class="table-success">
+                        <th scope="row ">3</th>
+                        <td>Application Programming for Mobile Devices</td>
+                        <td>5</td>
+                      </tr>
+                      <tr class="table-danger">
+                        <th scope="row ">4</th>
+                        <td>Logistics</td>
+                        <td>5</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button
+                    class="btn btn-link btn-block text-left collapsed font-500"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Ümumi kreditlər
+                  </button>
+                </h2>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse"
+                aria-labelledby="headingTwo"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr class="table-info">
+                        <th scope="col">#</th>
+                        <th scope="col">Semestr</th>
+                        <th scope="col">Kredit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-primary">
+                        <th scope="row">1</th>
+                        <td>1-ci</td>
+                        <td>30</td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <th scope="row">2</th>
+                        <td>2-ci</td>
+                        <td>25</td>
+                      </tr>
+                      <tr class="table-success">
+                        <th scope="row">3</th>
+                        <td>3-cü</td>
+                        <td>34</td>
+                      </tr>
+                      <tr class="table-warning">
+                        <th scope="row">4</th>
+                        <td>4-cü</td>
+                        <td>34</td>
+                      </tr>
+                      <tr class="table-danger">
+                        <th scope="row">5</th>
+                        <td>5-ci</td>
+                        <td>24</td>
+                      </tr>
+                      <tr class="table-danger">
+                        <th scope="row">6</th>
+                        <td>6-cı</td>
+                        <td>30</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 class="logo-h">BBA019</h1>
+      </div>
+      <div class="semestr">
+        <div class="yuxari">
+          <div class="top">
+            <div class="geri" onclick="geri()">
+              <div class="ox"></div>
+              Geri
+            </div>
+            <button id="toggler-button" class="side-open">
+              <i class="fas fa-question"></i>
+            </button>
+          </div>
+          <h1 class="mar-50 font-600">Semestr üzrə ortalama</h1>
+          <div class="table-responsive">
+            <table class="yuxaritable">
+              <tr>
+                <td colspan="2" id="secim1">
+                  <label for="fensayi">Fənn sayı:</label>
+                </td>
+                <td colspan="2" id="secim2">
+                  <select
+                    class="changediv"
+                    id="fensayi"
+                    name="fensayi"
+                    onchange="deyis()"
+                  >
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Bal</td>
+                <td colspan="2">Kredit</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="bal-1"
+                    name="bal-1"
+                    class="giris enterScore bal-style"
+                    maxlength="3"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="kredit-1"
+                    name="kredit-1"
+                    class="giris enterCredit"
+                    maxlength="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="bal-2"
+                    name="bal-2"
+                    class="giris enterScore"
+                    maxlength="3"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="kredit-2"
+                    name="kredit-2"
+                    class="giris enterCredit"
+                    maxlength="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="bal-3"
+                    name="bal-3"
+                    class="giris enterScore"
+                    maxlength="3"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="kredit-3"
+                    name="kredit-3"
+                    class="giris enterCredit"
+                    maxlength="1"
+                  />
+                </td>
+              </tr>
+              <tr id="fen4">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="bal-4"
+                    name="bal-4"
+                    class="giris enterScore"
+                    maxlength="3"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="kredit-4"
+                    name="kredit-4"
+                    class="giris enterCredit"
+                    maxlength="1"
+                  />
+                </td>
+              </tr>
+              <tr id="fen5">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="bal-5"
+                    name="bal-5"
+                    class="giris enterScore"
+                    maxlength="3"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="kredit-5"
+                    name="kredit-5"
+                    class="giris enterCredit"
+                    maxlength="1"
+                  />
+                </td>
+              </tr>
+              <tr id="fen6">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="bal-6"
+                    name="bal-6"
+                    class="giris enterScore"
+                    maxlength="3"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="kredit-6"
+                    name="kredit-6"
+                    class="giris enterCredit"
+                    maxlength="1"
+                  />
+                </td>
+              </tr>
+              <tr id="fen7">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="bal-7"
+                    name="bal-7"
+                    class="giris enterScore"
+                    maxlength="3"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="kredit-7"
+                    name="kredit-7"
+                    class="giris enterCredit"
+                    maxlength="1"
+                  />
+                </td>
+              </tr>
+              <tr id="fen8">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="bal-8"
+                    name="bal-8"
+                    class="giris enterScore"
+                    maxlength="3"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="kredit-8"
+                    name="kredit-8"
+                    class="giris enterCredit"
+                    maxlength="1"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2">GPA</td>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input id="cavab" name="cavab" class="cavab" disabled />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="button"
+                    value="Hesabla"
+                    class="btn-hesab"
+                    onclick="hesabla()"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="umumi">
+        <div class="asagi">
+          <div class="top">
+            <div class="geri" onclick="geri()">
+              <div class="ox"></div>
+              Geri
+            </div>
+            <button id="toggler-button2" class="side-open">
+              <i class="fas fa-question"></i>
+            </button>
+          </div>
+          <h1 class="mar-50 font-600">Ümumi ortalama bal</h1>
+          <div class="table-responsive">
+            <table class="asagitable">
+              <tr>
+                <td colspan="2" id="sec1">
+                  <label for="semsayi">Semestr sayi:</label>
+                </td>
+                <td colspan="2" id="sec2">
+                  <select
+                    class="changediv"
+                    id="semsayi"
+                    name="semsayi"
+                    onchange="deyis2()"
+                  >
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Ortalama</td>
+                <td colspan="2">Ümumi Kredit</td>
+              </tr>
+              <tr id="sem1">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umbal-1"
+                    name="umbal-1"
+                    class="umgiris enterTotal"
+                    maxlength="6"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umkredit-1"
+                    name="umkredit-1"
+                    class="umgiris enterTotalCred"
+                    maxlength="2"
+                  />
+                </td>
+              </tr>
+              <tr id="sem2">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umbal-2"
+                    name="umbal-2"
+                    class="umgiris enterTotal"
+                    maxlength="6"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umkredit-2"
+                    name="umkredit-2"
+                    class="umgiris enterTotalCred"
+                    maxlength="2"
+                  />
+                </td>
+              </tr>
+              <tr id="sem3">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umbal-3"
+                    name="umbal-3"
+                    class="umgiris enterTotal"
+                    maxlength="6"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umkredit-3"
+                    name="umkredit-3"
+                    class="umgiris enterTotalCred"
+                    maxlength="2"
+                  />
+                </td>
+              </tr>
+              <tr id="sem4">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umbal-4"
+                    name="umbal-4"
+                    class="umgiris enterTotal"
+                    maxlength="6"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umkredit-4"
+                    name="umkredit-4"
+                    class="umgiris enterTotalCred"
+                    maxlength="2"
+                  />
+                </td>
+              </tr>
+              <tr id="sem5">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umbal-5"
+                    name="umbal-5"
+                    class="umgiris enterTotal"
+                    maxlength="6"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umkredit-5"
+                    name="umkredit-5"
+                    class="umgiris enterTotalCred"
+                    maxlength="2"
+                  />
+                </td>
+              </tr>
+              <tr id="sem6">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umbal-6"
+                    name="umbal-6"
+                    class="umgiris enterTotal"
+                    maxlength="6"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umkredit-6"
+                    name="umkredit-6"
+                    class="umgiris enterTotalCred"
+                    maxlength="2"
+                  />
+                </td>
+              </tr>
+              <tr id="sem7">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umbal-7"
+                    name="umbal-7"
+                    class="umgiris enterTotal"
+                    maxlength="6"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umkredit-7"
+                    name="umkredit-7"
+                    class="umgiris enterTotalCred"
+                    maxlength="2"
+                  />
+                </td>
+              </tr>
+              <tr id="sem8">
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umbal-8"
+                    name="umbal-8"
+                    class="umgiris enterTotal"
+                    maxlength="6"
+                  />
+                </td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    id="umkredit-8"
+                    name="umkredit-8"
+                    class="umgiris enterTotalCred"
+                    maxlength="2"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">GPA</td>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <td colspan="2" id="sec1">
+                  <input id="umcavab" name="umcavab" class="umcavab" disabled />
+                </td>
+                <td colspan="2" id="sec2">
+                  <input
+                    type="button"
+                    value="Hesabla"
+                    class="btn-umhesab"
+                    onclick="umhesabla()"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <p class="copy">© Copyright "BBA-019" 2022. Bütün Hüquqlar Qorunur.</p>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
