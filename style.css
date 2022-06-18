@@ -350,6 +350,7 @@ label {
   color: #2a4482;
   font-family: "Monoton", Helvetica, sans-serif !important;
   align-self: center;
+  margin-bottom:50px;
 }
 @media (min-width: 700px) {
   .logo-h {
