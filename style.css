@@ -319,13 +319,7 @@ label {
   margin: 10px 0;
 }
 .card-header {
-  background: repeating-linear-gradient(
-    45deg,
-    #606dbc,
-    #606dbc 10px,
-    #2a4482 10px,
-    #2a4482 20px
-  ) !important;
+  background: linear-gradient(90deg, hsla(222, 51%, 34%, 1) 0%, hsla(235, 39%, 45%, 1) 100%, hsla(237, 64%, 56%, 1) 100%) !important;
   color: #fff !important;
 }
 .btn-link {
@@ -368,4 +362,9 @@ label {
     background: linear-gradient(7deg, #f4b41a 50%, #2a4482 0);
     -webkit-background-clip: text;
   }
+}
+.fl{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
