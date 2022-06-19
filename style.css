@@ -319,11 +319,12 @@ label {
   margin: 10px 0;
 }
 .card-header {
-  background: linear-gradient(
-    90deg,
-    hsla(222, 51%, 34%, 1) 0%,
-    hsla(235, 39%, 45%, 1) 100%,
-    hsla(237, 64%, 56%, 1) 100%
+  background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #2a4482 10px,
+    #2a4482 20px
   ) !important;
   color: #fff !important;
 }
@@ -337,7 +338,7 @@ label {
   box-shadow: none !important;
 }
 .font-600 {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 .font-500 {
   font-weight: 500 !important;
@@ -349,7 +350,7 @@ label {
   color: #2a4482;
   font-family: "Monoton", Helvetica, sans-serif !important;
   align-self: center;
-  margin-top: 100px;
+  margin-bottom: 50px;
 }
 @media (min-width: 700px) {
   .logo-h {
