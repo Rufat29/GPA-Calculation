@@ -278,6 +278,9 @@ label {
 .side-open:hover i {
   color: #fff;
 }
+.side-open:hover p {
+  color: #fff;
+}
 .side-open:hover {
   background: var(--myblue);
   border: 1px solid #fff;
@@ -302,6 +305,25 @@ label {
   gap: 10px;
   align-items: center;
   justify-content: space-between;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+.bottom button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 15px;
+  width: auto !important;
+  border-radius: 15px;
+  font-weight: 600;
+}
+.bottom button p{
+  margin-bottom: unset !important;
 }
 .mar-50 {
   margin-top: 70px;
