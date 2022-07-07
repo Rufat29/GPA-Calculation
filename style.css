@@ -322,7 +322,6 @@ label {
   background-color: #fff;
   border: 2px solid var(--myblue);
   transition: 0.2s ease !important;
-  padding: 10px;
   color: var(--myblue);
   text-align: center;
   font-size: 1em;
