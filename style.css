@@ -312,6 +312,10 @@ label {
   right: 0;
   padding: 10px;
 }
+.bottom a{
+  text-decoration: none !important;
+  color: var(--myblue) !important;
+}
 .bottom button{
   display: flex;
   align-items: center;
