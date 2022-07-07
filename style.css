@@ -306,8 +306,6 @@ label {
   align-items: center;
   justify-content: space-between;
 }
-.bottom {
-}
 .bottom a {
   text-decoration: none !important;
   color: var(--myblue) !important;
@@ -323,6 +321,11 @@ label {
   border-radius: 0.25rem;
   background-color: #fff;
   border: 2px solid var(--myblue);
+  transition: 0.2s ease !important;
+  padding: 10px;
+  color: var(--myblue);
+  text-align: center;
+  font-size: 1em;
 }
 .bottom button p {
   margin-bottom: unset !important;
