@@ -307,27 +307,26 @@ label {
   justify-content: space-between;
 }
 .bottom {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
 }
-.bottom a{
+.bottom a {
   text-decoration: none !important;
   color: var(--myblue) !important;
 }
-.bottom button{
+.bottom button {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 15px;
-  padding: 0 15px;
-  width: auto !important;
-  border-radius: 15px;
-  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  width: 100% !important;
+  height: 60px;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  border: 2px solid var(--myblue);
 }
-.bottom button p{
+.bottom button p {
   margin-bottom: unset !important;
+  padding: 0.375rem 0.75rem;
 }
 .mar-50 {
   margin-top: 70px;
@@ -345,7 +344,12 @@ label {
   margin: 10px 0;
 }
 .card-header {
-  background: linear-gradient(90deg, hsla(222, 51%, 34%, 1) 0%, hsla(235, 39%, 45%, 1) 100%, hsla(237, 64%, 56%, 1) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    hsla(222, 51%, 34%, 1) 0%,
+    hsla(235, 39%, 45%, 1) 100%,
+    hsla(237, 64%, 56%, 1) 100%
+  ) !important;
   color: #fff !important;
 }
 .btn-link {
@@ -389,8 +393,8 @@ label {
     -webkit-background-clip: text;
   }
 }
-.fl{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.fl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
