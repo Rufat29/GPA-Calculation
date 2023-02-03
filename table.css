@@ -5,7 +5,8 @@
 table {
   display: block;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
+  margin-bottom: unset !important;
 }
 td {
   font-size: 16px !important;
